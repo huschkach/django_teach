@@ -9,9 +9,15 @@ class Student(models.Model):
     studentID = models.IntegerField()
     phone = models.CharField(max_length=20, null=True)
 
+    def __str__(self):
+        return f"{self.lastname}, {self.firstname}"
+
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     difficulty = models.IntegerField(null=True)
     question_id = models.AutoField(primary_key=True)
+
+    def __str__(self):
+        return f"{self.question_text}"
 

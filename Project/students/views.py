@@ -11,6 +11,7 @@ def students(request):
 
 
 def student_list(request):
+    # SELECT firstname, lastname, birthday, studentId, phone  FROM Student;
     mystudents = Student.objects.all().values()
     template = loader.get_template('student_list.html')
     context = {

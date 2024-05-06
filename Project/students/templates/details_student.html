@@ -1,0 +1,19 @@
+{% extends "main_template.html" %}
+
+{% block title %}
+{{ mystudent.lastname }} - Details
+{% endblock %}
+
+{% block content %}
+    <h1>{{mystudent.lastname }}, {{mystudent.firstname }}</h1>
+
+    <p>StudentenID: {{ mystudent.studentID }} </p>
+    <p>Geburtstag: {{ mystudent.birthday }}</p>
+
+    <ul>
+        <li>{{ mystudent.phone }}</li>
+    </ul>
+
+<p>Zurück zu <a href="/list">Studenten-List</a></p>
+
+{% endblock %}

@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Student's List</title>
-</head>
-<body>
+{% extends "main_template.html" %}
+
+{% block title %}
+    Student's List
+{% endblock %}
+
+{% block content %}
     <h1>Auflistung aller Studenten</h1>
     <ol>
         {% for x in mystudents %}
-        <li>{{ x.lastname }}, {{ x.firstname }} - {{ x.birthday }}</li>
+        <li><a href="/students/details/{{ x.studentID}}">{{ x.lastname }}, {{ x.firstname }} - {{ x.birthday }}</a></li>
         {% endfor %}
-        <li>Alex</li>
-        <li>Flo</li>
-        <li>Patrick</li>
-        <li>Xhuljan</li>
-        <li>Hamid</li>
     </ol>
     <p>Weitere werden noch kommen.</p>
-</body>
-</html>
+{% endblock %}

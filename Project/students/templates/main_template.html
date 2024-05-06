@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <style>
+        header {
+        background-color: aquamarine;
+        color: black;
+        text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        nav a {
+            color: black;
+            padding: 20px 20px;
+            text-transform: lowercase;
+            background-color: aquamarine3;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: cyan;
+            cursor: grab;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left:0;
+            width: 100%;
+        }
+    </style>
+
+    <!--<link rel="stylesheet" href="{% static 'style.css' %}">-->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Startseite</a>
+            <a href="/list">Studentenliste</a>
+            <a href="/questions">Frageliste</a>
+            <a href="/impressum">Impressum</a>
+            <a href="/contact">Kontakt</a>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>Copyright &copy; 2024. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>

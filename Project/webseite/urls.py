@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from students import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,7 @@ urlpatterns = [
     path('list/', views.student_list, name='students_list'),
     path('lebenslauf/', views.lebenslauf, name='lebenslauf'),
     path('students/details/<int:id>', views.details, name='details'),
-    path('', views.main, name='main')
+    path('', views.main, name='main'),
+    path('name/', views.get_name, name='getName'),
+    path('your-name/<str:name>', views.show_name, name='showName')
 ]

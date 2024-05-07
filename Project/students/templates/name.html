@@ -1,0 +1,15 @@
+{% extends "main_template.html" %}
+
+{% block title %}
+Namenseingabe
+{% endblock %}
+
+{% block content %}
+<h1>Verrat uns deinen Namen</h1>
+<form action="/your-name/{{ your_name }}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Senden">
+</form>
+
+{% endblock %}

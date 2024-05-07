@@ -1,0 +1,29 @@
+header {
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+nav a {
+    color: black;
+    padding: 20px 20px;
+    text-transform: lowercase;
+    background-color: aquamarine3;
+    border-radius: 30px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: cyan;
+    cursor: grab;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}

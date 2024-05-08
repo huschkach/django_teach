@@ -28,5 +28,6 @@ urlpatterns = [
     path('students/details/<int:id>', views.details, name='details'),
     path('', views.main, name='main'),
     path('name/', views.get_name, name='getName'),
-    path('your-name/<str:name>', views.show_name, name='showName')
+    path('yourname/<str:named>', views.show_name, name='showName'),
+    path('new_user/', views.new_user, name='newUser')
 ]

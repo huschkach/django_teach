@@ -8,8 +8,8 @@
     <h1>Auflistung aller Studenten</h1>
     <ol>
         {% for x in mystudents %}
-        <li><a href="/students/details/{{ x.studentID}}">{{ x.lastname }}, {{ x.firstname }} - {{ x.birthday }}</a></li>
+        <li><a href="/students/details/{{ x.studentID }}">{{ x.lastname }}, {{ x.firstname }} - {{ x.birthday }}</a></li>
         {% endfor %}
     </ol>
-    <p>Weitere werden noch kommen.</p>
+    <p><a href="/new_user">Neuen Nutzer anlegen</a></p>
 {% endblock %}

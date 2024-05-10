@@ -1,6 +1,7 @@
 from django.db import models
 # ORM = object relational mapper
 
+
 # Create your models here.
 class Student(models.Model):
     firstname = models.CharField(max_length=128)
